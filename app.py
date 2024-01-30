@@ -272,7 +272,8 @@ if selected == 'Projects':
                     
         Screenshot of the live app:
         """)
-        st.image(images_paths['lstm-app'], caption='Screenshot of the live app. You can click on the link below to test it')
+        with st.columns([1, 10, 1])[1]:
+            st.image(images_paths['lstm-app'], caption='Screenshot of the live app. You can click on the link below to test it', use_column_width=True, output_format='auto')
 
         git, live = st.columns(2)
 
@@ -313,7 +314,8 @@ if selected == 'Projects':
         Screenshot of some of the results during model building:
                     
         """)
-        st.image(images_paths['cnn-app'], caption='Predictions vs Labels after training model')
+        with st.columns([2, 10, 2])[1]:
+            st.image(images_paths['cnn-app'], caption='Predictions vs Labels after training model', use_column_width=True, output_format='auto')
         st.markdown("""
             <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
                 <a href="https://github.com/RikiSot/cnn-weather-recognition" target="_blank" data-toggle="tooltip" data-placement="top" title="GitHub">
@@ -341,7 +343,8 @@ if selected == 'Projects':
         The whole project can be reached at the public UPV repository (Spanish) RiuNet
 
         """)
-        st.image(images_paths['smart-battery-manager'])
+        with st.columns([1, 10, 1])[1]:
+            st.image(images_paths['smart-battery-manager'], use_column_width=True, output_format='auto')
 
         git, live = st.columns(2)
 
@@ -357,7 +360,7 @@ if selected == 'Projects':
             st.markdown(f"""
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
                     <a href="https://riunet.upv.es/handle/10251/181879" target="_blank" data-toggle="tooltip" data-placement="top" title="UPV repository">
-                        <img src="{images_paths['upv']}" style="max-width: 70%; height: auto;">
+                        <img src="{images_paths['upv']}" style="max-width: 70%; height: auto; margin-top: 5px">
                     </a>
                 </div>
             """, unsafe_allow_html=True)
