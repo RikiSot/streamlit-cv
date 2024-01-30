@@ -69,7 +69,7 @@ def get_lotie_asset(asset_name: str):
 col1, col2 = st.columns(2)
 with col1:
     st.write('##')
-    image, text = st.columns([2, 20])
+    image, text = st.columns([4, 20])
     with image:
         st.markdown(
             """
