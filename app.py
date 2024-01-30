@@ -160,60 +160,79 @@ with st.container():
     
 if selected == 'Experience':
 
-    st.write('---')
+    st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-briefcase-fill' style='margin-right: 20px'></i> Work Experience</h1>", unsafe_allow_html=True)
+    st.write('##')
 
     with st.container():
-        st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-briefcase'></i> Work Experience</h1>", unsafe_allow_html=True)
-        st.write('##')
+        image, text = st.columns([1, 20])
+        with image:
+            st.image(images_paths['idrica_logo'])
+        with text:
+            st.subheader("[Idrica](http://www.idrica.com)")
+        st.markdown("Python developer, Valencia, Spain (01/2023 - Present)")
+        st.markdown("""
+        ### Skills
 
-        with st.container():
-            image, text = st.columns([1, 20])
-            with image:
-                st.image(images_paths['idrica_logo'])
-            with text:
-                st.subheader("[Idrica](http://www.idrica.com)")
-            st.markdown("Python developer, Valencia, Spain (01/2023 - Present)")
-            st.markdown("""
-            - Research and find new methods to improve energy efficiency for water facilities
-            - Design data dashboards and relevant KPIs
-            - Standalone development of a smart pump scheduling algorithm using AI and optimization techniques
-            """)
-            st.write('---')
+        - **Research and Development:**
+            Researching and implementing methods to enhance energy efficiency in water facilities.
 
-        with st.container():
-            image, text = st.columns([1, 20])
-            with image:
-                st.image(images_paths['nexus_integra_logo'])
-            with text:
-                st.subheader("[Nexus Integra](https://nexusintegra.io/)")
-            st.markdown("Junior Engineer, Valencia, Spain (04/2021 - 01/2023)")
-            st.markdown("""
-            - Data Analysis with Python
-            - SQL queries
-            - SCADA systems design
-            - Data Visualization
-            - Webscraping and API REST usage
-            - Building and maintaining Python packages
-            """)
-            st.write('---')
+        - **Data Visualization and Analytics:**
+            Designing data dashboards and defining relevant Key Performance Indicators (KPIs).
 
-        with st.container():
-            image, text = st.columns([1, 20])
-            with image:
-                st.image(images_paths['wola_logo'])
-            with text:
-                st.subheader("[Water Online Analysis](https://www.biosensores.com/water-online-analysis-europe-wola-sl/)")
-            st.markdown("Intern Electronics Engineer, Water Online Analysis, Castellón, Spain (07/2020 - 10/2020)")
-            st.markdown("""
-            - Participation in a project under PRIMA program supported by EU
-            - PLC's automation
-            - Database management with .NET libraries and C#
-            """)
-            st.write('---')
+        - **Algorithm Development:**
+            Independently developing a smart pump scheduling algorithm using AI and optimization techniques.
+
+        ### Stack
+
+        | Category          | Technologies             |
+        |-------------------|--------------------------|
+        | Languages         | Python 3                 |
+        | Data Manipulation | Pandas                   |
+        | AI                | Tensorflow/PyTorch       |
+        | Optimization      | Pyomo                    |
+        | Deployment        | Docker                   |
+        | Web Frameworks    | FastAPI                  |
+        | Visualization     | Streamlit/Plotly/Dash    |
+        | Databases         | SQL                      |
+        | CI/CD             | Azure, GitHub            |
+        """)
+        st.write('---')
+
+    with st.container():
+        image, text = st.columns([1, 20])
+        with image:
+            st.image(images_paths['nexus_integra_logo'])
+        with text:
+            st.subheader("[Nexus Integra](https://nexusintegra.io/)")
+        st.markdown("Junior Engineer, Valencia, Spain (04/2021 - 01/2023)")
+        st.markdown("""
+        - Data Analysis with Python
+        - SQL queries
+        - SCADA systems design
+        - Data Visualization
+        - Webscraping and API REST usage
+        - Building and maintaining Python packages
+        """)
+        st.write('---')
+
+    with st.container():
+        image, text = st.columns([1, 20])
+        with image:
+            st.image(images_paths['wola_logo'])
+        with text:
+            st.subheader("[Water Online Analysis](https://www.biosensores.com/water-online-analysis-europe-wola-sl/)")
+        st.markdown("Intern Electronics Engineer, Water Online Analysis, Castellón, Spain (07/2020 - 10/2020)")
+        st.markdown("""
+        - Participation in a project under PRIMA program supported by EU
+        - PLC's automation
+        - Database management with .NET libraries and C#
+        """)
+    
+    st.write('---')
 
         
 if selected == 'Projects':
-    st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-gear-fill'></i> Projects</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-gear-fill' style='margin-right: 20px'></i> Projects</h1>", unsafe_allow_html=True)
     st.write('##')
     
     with st.container():
@@ -345,7 +364,7 @@ if selected == 'Projects':
 
             
 if selected == 'Education and Certifications':
-    st.write('## Education')
+    st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-patch-check-fill' style='margin-right: 20px'></i>Education</h1>", unsafe_allow_html=True)
     st.write('##')
     
     education, certification = st.columns(2)
@@ -419,22 +438,6 @@ if selected == 'Education and Certifications':
                 
                 
 if selected == 'Contact':
-    st.header('Escríbeme')
-    st.write('##')
+    st.markdown("<h1 style='text-align: center; color: white;'><i class='bi bi-envelope-fill' style='margin-right: 20px'></i>Contact</h1>", unsafe_allow_html=True)
     st.write('##')
     st.markdown(contact_form, unsafe_allow_html=True)
-        
-if selected == 'Skills':
-    with st.container():
-        st.header('My Skills')
-        st.write('##')
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st_lottie('skill_animation_1')
-            st.subheader('Skill 1')
-        with col2:
-            st_lottie('skill_animation_2')
-            st.subheader('Skill 2')
-        with col3:
-            st_lottie('skill_animation_3')
-            st.subheader('Skill 3')
